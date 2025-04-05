@@ -1,5 +1,5 @@
 import React from "react";
-import Onboarding from "./pages/Onboarding";
+import Onboarding from "./pages/Onboarding.jsx";
 function App() {
   return (
     <div>
