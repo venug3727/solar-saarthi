@@ -4,9 +4,11 @@ import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
 import Button from "../components/Button.jsx";
 import BG from "../assets/backgroundimage.png";
+import Insights from "./Insights.jsx";
 import { ArrowRight, Sun } from "lucide-react";
+import IndiaMapDashboard from "./IndiaMapDashboard.jsx";
 
-function Onboarding() {
+function Home() {
   return (
     <div className="min-h-screen dark:bg-gray-900 dark:text-white flex flex-col overflow-x-hidden">
       {/* NavBar at the top */}
@@ -15,7 +17,7 @@ function Onboarding() {
       </header>
 
       {/* Main content with background image */}
-      <main className="flex-grow relative mt-[70px]">
+      <main id="home" className="flex-grow relative mt-[70px]">
         {/* Background image with overlay */}
         <div className="absolute inset-0 z-0">
           <motion.div
@@ -63,7 +65,7 @@ function Onboarding() {
                 onClick={() => console.log("Get Quote clicked")}
                 variant="primary"
                 size="large"
-                className="bg-green-600 hover:bg-green-700 transition-all transform hover:scale-105"
+                className="bg-green-600 hover:text-white border rounded-full transition-all transform hover:scale-105"
                 icon={Sun}
                 iconPosition="left"
               >
@@ -94,7 +96,12 @@ function Onboarding() {
           </div>
         </motion.div>
       </main>
-
+      <div className="c">
+        <Insights />
+      </div>
+      <div className="c">
+        <IndiaMapDashboard />
+      </div>
       {/* Footer at the bottom */}
       <footer className="w-full relative z-10">
         <Footer />
@@ -103,4 +110,4 @@ function Onboarding() {
   );
 }
 
-export default Onboarding;
+export default Home;

@@ -16,16 +16,15 @@ function Button({
 }) {
   // Base classes
   const baseClasses =
-    "rounded-md font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2";
+    " font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 bg-transparent";
 
   // Variant classes
   const variantClasses = {
-    primary: "bg-green-600 hover:bg-green-700 text-white focus:ring-green-500",
-    secondary:
-      "bg-gray-200 bg-transparent hover:bg-gray-300  text-gray-800 focus:ring-gray-500",
+    primary: "text-green-600 hover:text-green-700 focus:ring-green-500",
+    secondary: "text-gray-800 hover:text-gray-900 focus:ring-gray-500",
     outline:
       "border border-green-600 text-green-600 hover:bg-green-50 focus:ring-green-500",
-    danger: "bg-red-600 hover:bg-red-700 text-white focus:ring-red-500",
+    danger: "text-red-600 hover:text-red-700 focus:ring-red-500",
     text: "text-green-600 hover:text-green-700 focus:ring-green-500",
   };
 
@@ -49,11 +48,11 @@ function Button({
       onClick={onClick}
       className={`${baseClasses} ${variantClasses[variant]} ${
         sizeClasses[size]
-      } ${disabled ? disabledClasses : ""} ${fullWidthClass} ${className}   `}
+      } ${disabled ? disabledClasses : ""} ${fullWidthClass} ${className}`}
       {...props}
     >
       <span
-        className={`flex items-centerjustify-center ${
+        className={`flex items-center justify-center ${
           iconPosition === "right" ? "flex-row-reverse" : ""
         }`}
       >
