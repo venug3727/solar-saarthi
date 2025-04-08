@@ -7,6 +7,7 @@ import BG from "../assets/backgroundimage.png";
 import Insights from "./Insights.jsx";
 import { ArrowRight, Sun } from "lucide-react";
 import IndiaMapDashboard from "./IndiaMapDashboard.jsx";
+import Review from "./Review.jsx";
 
 function Home() {
   return (
@@ -101,6 +102,9 @@ function Home() {
       </div>
       <div className="c">
         <IndiaMapDashboard />
+      </div>
+      <div className="c">
+        <Review />
       </div>
       {/* Footer at the bottom */}
       <footer className="w-full relative z-10">
